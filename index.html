@@ -1,0 +1,181 @@
+// Made By Rochele Fernandez
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rochele Fernandez | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        maroon: {
+                            800: '#800000',
+                            900: '#500000',
+                        },
+                        gold: '#D4AF37'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .maroon-mode { background-color: #800000; color: #ffffff; }
+        .maroon-mode nav { background-color: rgba(80, 0, 0, 0.9); border-color: #9b1c1c; }
+        .maroon-mode .card { background-color: #500000; border-color: #a02020; color: white; }
+        .maroon-mode .text-maroon-800 { color: #fde68a; }
+        .maroon-mode .bg-blue-100 { background-color: #ffffff; color: #800000; }
+        .maroon-mode .bg-slate-100, .maroon-mode .bg-slate-200 { background-color: #500000; color: white; }
+    </style>
+</head>
+<body id="body-root" class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
+
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b dark:bg-slate-900/90 dark:border-slate-800 transition-colors">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="font-black text-xl tracking-tighter uppercase">ROCHELE FERNANDEZ</span>
+            <div class="flex items-center gap-3">
+                <button onclick="setTheme('light')" class="w-10 h-10 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full transition-all" title="Light Mode"><i class="fas fa-sun"></i></button>
+                <button onclick="setTheme('dark')" class="w-10 h-10 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-800 rounded-full transition-all" title="Dark Mode"><i class="fas fa-moon"></i></button>
+                <button onclick="setTheme('maroon')" class="px-4 py-1.5 bg-maroon-800 text-white rounded-full text-xs font-bold border-2 border-transparent hover:border-gold transition-all">Maroon</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
+        <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-maroon-800 to-gold rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+            <img src="https://via.placeholder.com/400" class="relative w-56 h-56 md:w-64 md:h-64 rounded-2xl object-cover shadow-2xl border-4 border-white dark:border-slate-800">
+        </div>
+        <div class="text-center md:text-left">
+            <h1 class="text-5xl md:text-6xl font-black mb-4 tracking-tight">Rochele Fernandez</h1>
+            <p class="text-xl font-bold text-maroon-800 dark:text-gold mb-4">ML/AI Enthusiast | Aspiring Data Engineer</p>
+            <p class="text-lg opacity-80 max-w-2xl leading-relaxed">
+                Currently venturing in <strong>data science</strong> and its' efforts to ML/AI development. 
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 pb-32 space-y-24">
+        
+        <section>
+            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3"><i class="fas fa-microchip text-maroon-800 dark:text-gold"></i> Internships</h2>
+            <div class="grid gap-8">
+                <div class="card p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700">
+                    <div class="flex justify-between items-start flex-wrap gap-2 mb-4">
+                        <div>
+                            <h3 class="font-bold text-2xl">QA / Software Testing Engineer Intern</h3>
+                            <p class="text-maroon-800 dark:text-gold font-bold">C8nnect IT Solutions</p>
+                        </div>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-black px-4 py-1.5 rounded-full">JANUARY 2026</span>
+                    </div>
+                    <p class="mb-4 text-lg">Utilized <strong>Selenium with Python</strong> to build automated tests for a dental clinic platform, ensuring seamless appointment and record management.</p>
+                    <p class="text-sm opacity-80 border-l-4 border-maroon-800 dark:border-gold pl-4">Collaborated with developers to resolve errors through detailed documentation and API debugging support.</p>
+                </div>
+
+                <div class="card p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700">
+                    <div class="flex justify-between items-start flex-wrap gap-2 mb-4">
+                        <div>
+                            <h3 class="font-bold text-2xl">City Engineering Intern</h3>
+                            <p class="text-maroon-800 dark:text-gold font-bold">Quezon City Government</p>
+                        </div>
+                        <span class="bg-slate-200 text-slate-800 text-xs font-black px-4 py-1.5 rounded-full">APRIL 2024</span>
+                    </div>
+                    <p class="text-lg">Assisted in drafting electrical system designs and performed critical cost estimations and computations using <strong>Microsoft Excel</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3"><i class="fas fa-crown text-gold"></i> Leadership</h2>
+            <div class="card p-8 bg-white dark:bg-slate-800 rounded-2xl border-l-8 border-maroon-800 dark:border-gold shadow-lg">
+                <h3 class="font-black text-2xl mb-1">AWS Learning Club - Quezon City University</h3>
+                <p class="text-maroon-800 dark:text-gold font-bold mb-6">Head of Relations & Communication Office</p>
+                <ul class="space-y-4">
+                    <li class="flex gap-3"><i class="fas fa-link mt-1 text-blue-500"></i> <span>Cultivated partnerships across AWSLC student organizations to expand the club's professional network.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-bullhorn mt-1 text-blue-500"></i> <span>Successfully secured <strong>Edukasyon.ph’s AWS Siklab</strong> as a partner for our Cybersecurity flagship event.</span></li>
+                    <li class="flex gap-3"><i class="fas fa-brain mt-1 text-blue-500"></i> <span>Active contributor to the AI/ML and Data Analysis Skill-Builder Committee.</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-bold mb-8"><i class="fas fa-rocket text-indigo-500"></i> Key Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="card p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 shadow-md">
+                    <span class="text-[10px] font-black tracking-widest uppercase text-orange-500">Active Development</span>
+                    <h4 class="font-bold text-lg mt-1 leading-tight">AI Class Schedule Prompter</h4>
+                    <p class="text-xs mt-2 opacity-70 italic mb-3">Collab with Kristina Khakimova (BMSTU Valedictorian)</p>
+                    <p class="text-sm">Extracts university schedules from registration forms to generate visual weekly calendars.</p>
+                </div>
+                <div class="card p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 shadow-md">
+                    <h4 class="font-bold text-lg">IoT Smoke Detector</h4>
+                    <p class="text-sm mt-3 opacity-80 italic">ESP-32 | Arduino | C++</p>
+                    <p class="text-sm mt-2">Remote alert system with real-time email notifications for fire detection.</p>
+                </div>
+                <div class="card p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 shadow-md">
+                    <h4 class="font-bold text-lg">Online GWA Calculator</h4>
+                    <p class="text-sm mt-3 opacity-80 italic">HTML | CSS | JavaScript</p>
+                    <p class="text-sm mt-2">Custom grade conversion and GPA calculation tool tailored for QCU standards.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <section>
+                <h2 class="text-2xl font-bold mb-6"><i class="fas fa-university"></i> Education & Honors</h2>
+                <div class="card p-6 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 h-full">
+                    <p class="font-bold text-lg">Quezon City University</p>
+                    <p class="text-sm opacity-80 mb-4">BS Computer Science (Current)</p>
+                    <ul class="text-sm space-y-2">
+                        <li class="flex items-center gap-2"><i class="fas fa-award text-gold"></i> Quezon City Government Scholar</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-medal text-slate-400"></i> 2025 IECEP NCR's EEE Group Quiz Bee Participant</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold mb-6"><i class="fas fa-certificate"></i> Certifications & Coursework</h2>
+                <div class="grid gap-3 text-sm">
+                    <div class="p-3 border rounded-lg bg-white dark:bg-slate-800 border-slate-200">
+                        <p class="font-bold">Python and its Application to Data Science</p>
+                        <p class="text-[10px] opacity-70">University of the Philippines Diliman, School of Economics</p>
+                    </div>
+                    <div class="p-3 border rounded-lg bg-white dark:bg-slate-800 border-slate-200">
+                        <p class="font-bold">AI Essentials: Theory and Practice</p>
+                        <p class="text-[10px] opacity-70">University of the Philippines Open University</p>
+                    </div>
+                    <div class="p-3 border rounded-lg bg-white dark:bg-slate-800 border-slate-200">
+                        <p class="font-bold">Data Analysis Essentials</p>
+                        <p class="text-[10px] opacity-70">CISCO Networking Academy</p>
+                    </div>
+                    <div class="p-3 border rounded-lg bg-white dark:bg-slate-800 border-slate-200">
+                        <p class="font-bold">Intermediate SQL</p>
+                        <p class="text-[10px] opacity-70">DataCamp Online Academy</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="text-center py-16 bg-slate-100 dark:bg-slate-800 rounded-3xl transition-colors">
+            <h2 class="text-2xl font-bold mb-4">Workshop Activities</h2>
+            <p class="mb-8 opacity-70 max-w-md mx-auto">You can check out my workshop activities and event highlights here at my LinkedIn's featured post.</p>
+            <a href="https://www.linkedin.com/in/rochele-fernandez-7a8964354/" target="_blank" class="inline-flex items-center gap-2 bg-maroon-800 text-white px-10 py-4 rounded-full font-bold hover:scale-105 transition-transform shadow-xl">
+                <i class="fab fa-linkedin"></i> View Featured Posts
+            </a>
+        </section>
+    </main>
+
+    <script>
+        function setTheme(mode) {
+            const body = document.getElementById('body-root');
+            body.classList.remove('dark', 'maroon-mode');
+            if (mode === 'dark') body.classList.add('dark');
+            if (mode === 'maroon') body.classList.add('maroon-mode');
+        }
+    </script>
+</body>
+</html>
