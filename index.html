@@ -25,15 +25,14 @@
         /* MAROON THEME OVERRIDES */
         .maroon-mode { background-color: #800000; color: #ffffff; }
         .maroon-mode nav { background-color: rgba(80, 0, 0, 0.95); border-color: #9b1c1c; }
-        .maroon-mode .card { background-color: #ffffff; border-color: #e2e8f0; color: #0f172a; } /* Keeps cards white with dark text */
-        .maroon-mode .section-title { color: #fde68a; } /* Gold titles in Maroon mode */
+        .maroon-mode .card { background-color: #ffffff; border-color: #e2e8f0; color: #0f172a; }
+        .maroon-mode .section-title { color: #fde68a; }
         .maroon-mode .hero-sub { color: #fde68a; }
         .maroon-mode .bg-slate-100 { background-color: #500000; color: white; }
-        
         .transition-all { transition: all 0.3s ease-in-out; }
     </style>
 </head>
-<body id="body-root" class="bg-slate-50 text-slate-900 transition-all">
+<body id="body-root" class="bg-slate-50 text-slate-900 transition-all flex flex-col min-h-screen">
 
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b transition-all">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
@@ -47,20 +46,21 @@
 
     <header class="max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
        <div class="relative group">
-    <div class="absolute -inset-1 bg-gradient-to-r from-maroon-800 to-gold rounded-2xl blur opacity-25"></div>
-    <img src="https://drive.google.com/uc?export=view&id=1djGSexwxEA5nmq7HP4IcXEKojReUXAoq" 
-         class="relative w-56 h-56 md:w-64 md:h-64 rounded-2xl object-cover shadow-2xl border-4 border-white">
+            <div class="absolute -inset-1 bg-gradient-to-r from-maroon-800 to-gold rounded-2xl blur opacity-25"></div>
+            <img src="https://drive.google.com/thumbnail?id=1djGSexwxEA5nmq7HP4IcXEKojReUXAoq&sz=w1000" 
+                 class="relative w-56 h-56 md:w-64 md:h-64 rounded-2xl object-cover shadow-2xl border-4 border-white"
+                 onerror="this.src='https://via.placeholder.com/400?text=Check+Drive+Permissions'">
        </div>
         <div class="text-center md:text-left">
             <h1 class="text-5xl md:text-6xl font-black mb-4 tracking-tight">Rochele Fernandez</h1>
             <p class="hero-sub text-xl font-bold text-maroon-800 mb-4 transition-all">BS Computer Science | Student Leader</p>
             <p class="text-lg opacity-90 max-w-2xl leading-relaxed">
-                Actively building my skills for <strong>Data Engineering</strong> and its' scope to ML/AI development. Also a workshop & seminar enthusiast!
+                Actively building my skills for <strong>Data Engineering</strong> and its scope to ML/AI development. Also a workshop & seminar enthusiast!
             </p>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 pb-32 space-y-20">
+    <main class="max-w-6xl mx-auto px-6 pb-20 space-y-20 flex-grow">
         
         <section>
             <h2 class="section-title text-3xl font-bold mb-8 flex items-center gap-3"><i class="fas fa-microchip"></i> Internships</h2>
@@ -130,40 +130,35 @@
         <div class="grid md:grid-cols-2 gap-8">
             <section>
                 <h2 class="section-title text-2xl font-bold mb-6"><i class="fas fa-university"></i> Education</h2>
-                <div class="card p-6 bg-white rounded-xl shadow-md h-full">
+                <div class="card p-6 bg-white rounded-xl shadow-md h-full text-slate-700">
                     <p class="font-bold text-lg text-slate-900">Quezon City University</p>
                     <p class="text-sm text-slate-500 mb-4 font-medium">BS Computer Science</p>
-                    <ul class="text-sm space-y-3 text-slate-700">
-                        <li class="flex items-center gap-2"><i class="fas fa-award text-gold"></i> Quezon City Government Scholar</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-medal text-slate-400"></i> IECEP NCR's EEE Group Quiz Bee Participant</li>
-                         <li class="flex items-center gap-2"><i class="fas fa-award text-gold"></i> Completed a year and half worth of college units in Electronics Engineering</li>
-                         <li class="flex items-center gap-2"><i class="fas fa-medal text-slate-400"></i> Active student leader</li>
-<li class="flex items-center gap-2"><i class="fas fa-award text-gold"></i> IEEE Computer Society - Philippine Chapter member </li>
+                    <ul class="text-sm space-y-3">
+                        <li class="flex items-start gap-2"><i class="fas fa-award text-gold mt-1"></i> <span>Quezon City Government Scholar</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-medal text-slate-400 mt-1"></i> <span>IECEP NCR's EEE Group Quiz Bee Participant</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-bolt text-gold mt-1"></i> <span>Completed 1.5 years of Electronics Engineering units</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-users text-blue-500 mt-1"></i> <span>Active student leader</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-microchip text-gold mt-1"></i> <span>IEEE Computer Society - Philippine Chapter member</span></li>
                     </ul>
                 </div>
             </section>
 
             <section>
-                <h2 class="section-title text-2xl font-bold mb-6"><i class="fas fa-certificate"></i> Certifications and Courseworks</h2>
+                <h2 class="section-title text-2xl font-bold mb-6"><i class="fas fa-certificate"></i> Certifications</h2>
                 <div class="grid gap-3">
                     <div class="card p-4 bg-white rounded-lg shadow-sm text-sm">
                         <p class="font-bold text-slate-900 leading-tight">Python and its Application to Data Science</p>
-                        <p class="text-[10px] text-slate-500 uppercase mt-1">UP Diliman, School of Economics, held onsite every Monday of March 2026</p>
+                        <p class="text-[10px] text-slate-500 uppercase mt-1">UP Diliman, School of Economics (March 2026)</p>
                     </div>
                     <div class="card p-4 bg-white rounded-lg shadow-sm text-sm">
                         <p class="font-bold text-slate-900 leading-tight">AI Essentials: Theory and Practice</p>
                         <p class="text-[10px] text-slate-500 uppercase mt-1">UP Open University</p>
                     </div>
-                    <div class="card p-4 bg-white rounded-lg shadow-sm text-sm flex justify-between items-center">
-                        <div>
-                            <p class="font-bold text-slate-900 leading-tight">Data Analysis Essentials</p>
-                            <p class="text-[10px] text-slate-500 uppercase mt-1">CISCO Networking Academy</p>
-                        </div>
-                    </div>
                     <div class="card p-4 bg-white rounded-lg shadow-sm text-sm">
-                        <p class="font-bold text-slate-900 leading-tight">Intermediate SQL</p>
-                        <p class="text-[10px] text-slate-500 uppercase mt-1">DataCamp Online Academy</p>
+                        <p class="font-bold text-slate-900 leading-tight">Data Analysis Essentials</p>
+                        <p class="text-[10px] text-slate-500 uppercase mt-1">CISCO Networking Academy</p>
                     </div>
+                    <div class="card p-4 bg-white rounded-lg shadow-sm text-sm font-bold text-slate-900">Intermediate SQL • DataCamp</div>
                 </div>
             </section>
         </div>
@@ -177,14 +172,20 @@
         </section>
     </main>
 
+    <footer class="max-w-6xl mx-auto px-6 py-10 border-t border-slate-200 text-center text-xs opacity-60">
+        <p>&copy; 2026 Rochele Fernandez..</p>
+        <p id="last-updated" class="mt-2 uppercase tracking-widest font-bold">Last Updated: March 2026.</p>
+    </footer>
+
     <script>
         function setTheme(mode) {
             const body = document.getElementById('body-root');
             body.classList.remove('maroon-mode');
-            if (mode === 'maroon') {
-                body.classList.add('maroon-mode');
-            }
+            if (mode === 'maroon') body.classList.add('maroon-mode');
         }
+
+        // Set Last Updated Date automatically
+        document.getElementById('last-updated').innerText = "Last Updated: " + new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
     </script>
 </body>
 </html>
